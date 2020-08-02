@@ -1,7 +1,11 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: #000000;
+    background-color: rgb(226, 222, 222);
+}
+a {
+    text-decoration: none;
+    color: #000000;
 }
 ul {
     list-style: none;
@@ -12,25 +16,31 @@ ul {
 nav {
     position: fixed;
     overflow-y: scroll;
+    overflow-x: auto;
     float: left;
     width: 25%;
     height: 100%;
-    background-color: #e6e6e6;
-    color: #5a5a5a;
+    /* background-color: #e6e6e6; */
+    background-color: #fef213;
+    color: #000000;
     text-align: center;
 }
 nav img {
-    width: 25%;
+    width: 35%;
     border-radius: 50%;
+}
+nav ul {
+    text-align: center;
 }
 nav li {
     padding: 1rem;
+    /* margin: 0 auto 2rem 0; */
     margin-right: 2.4rem;
     margin-bottom: 2rem;
     border-radius: 1rem;
-    border: 1px solid #f1f1f1;
+    /* border: 1px solid #f1f1f1; */
     background-color:#fff ;
-    color: #575656;
+    color: #000000;
     text-align: left;
     width: 73%;
 }
@@ -126,15 +136,36 @@ input {
 } */
 .admin-info{
     display: grid;
-    grid-template-columns: 30% 30% 30%;
-    grid-template-rows: auto;
+    /* grid-template-columns: 30% 30% 30%; */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     row-gap: 3rem;
     column-gap: 3rem;
+    color: #000000;
     /* flex-flow: row wrap;
     justify-content: left; */
 }
 .admin-info li {
     padding: 1rem 2rem 3rem;
-    border: 1px solid #cac8c8;
+    background-color: #fff;
+    border: 1px solid #fff;
     border-radius: 1rem;
+}
+footer {
+    text-align: center;
+    margin-top: 5rem;
+    color: #000000;
+}
+
+/* responsiveness */
+@media (max-width: 800px) {
+    nav {
+        width:35%;
+    }
+    section {
+        width: 65%;
+        padding-left: 1rem;
+    }
+    nav h1 {
+        font-size: 1rem;
+    }
 }
